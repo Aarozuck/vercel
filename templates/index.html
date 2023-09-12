@@ -1,87 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
+.bgimg {
+  background-image: url('../w3images/forestbridge.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
-    <!-- Favicon  -->
-    <link rel="icon" href=" {% static 'img/core-img/favicon.ico' %} ">
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href=" {% static 'style.css' %} ">
-    {% comment %} ==================================================================================================== {% endcomment %}
-      <link rel="stylesheet" href=" {% static 'css/chat.css' %} ">
-      <link rel="stylesheet" href=" {% static 'css/home.css' %} ">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {% comment %} =============================================================================================================================== {% endcomment %}
-  
-</head>
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
 
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
-    <h1> this is a sample ....
-    
-    Teen vibe Will be Here Soon</h1>
-    <!-- ***** Footer Area End ***** -->
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src=" {% static 'scripts/responses.js' %} "></script>
-  <script src=" {% static 'scripts/chat.js' %} "></script>
- 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src=" {% static 'js/jquery/jquery-2.2.4.min.js' %} "></script>
-    <!-- Popper js -->
-    <script src=" {% static 'js/popper.min.js' %} "></script>
-    <!-- Bootstrap js -->
-    <script src=" {% static 'js/bootstrap.min.js' %} "></script>
-    <!-- Plugins js -->
-    <script src=" {% static 'js/plugins.js' %} "></script>
-    <!-- Active js -->
-    <script src=" {% static 'js/active.js' %} "></script>
-    <script>
-        var setdate = document.querySelector(".set_date");
-        var settime = document.querySelector(".set_time");
-    
-        var date = new Date().toDateString();
-        setdate.innerHTML = date;
-    
-    
-        setInterval(function () {
-          var time = new Date().toLocaleTimeString();
-          settime.innerHTML = time;
-        }, 500);
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-          var options = {
-            damping: '0.5'
-          }
-          Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-        function add_sub(id) {
-          $.ajax({
-            url: 'add_sub',
-            data: {
-              'subcode': id
-            }, success: function (data) {
-              location.reload();
-            }
-          });
-        }
-        function rm_sub(id) {
-          $.ajax({
-            url: 'rm_sub',
-            data: {
-              'subcode': id
-            }, success: function (data) {
-              location.reload();
-            }
-          });
-        }
-      </script>
-</body>
 
+<div class="bgimg">
+  <div class="topleft">
+   
+  </div>
+  <div class="middle">
+    <h1>Teen Vibe</h1>
+    <h3>COMING SOON</h3>
+    <hr>
+    <p>35 days left</p>
+  </div>
+  <div class="bottomleft">
+    <li>Feeds Page 📸</li>
+    <li>🤣 Memes 🤣</li>
+    <li>Chat 💌</li>
+    <li>Best Place for Postive people</li>
+  </div>
+</div>
+
+</body>
 </html>
